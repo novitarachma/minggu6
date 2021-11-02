@@ -126,4 +126,10 @@ class StudentController extends Controller
         return redirect()->route('students.index');
 
     }
+
+    public function nilai($id)
+    {
+        $student = Student::find($id);
+        return view('students.nilai', ['student'=>$student]);
+    }
 }
