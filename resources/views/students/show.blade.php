@@ -12,9 +12,10 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
-                    @endif
+                    @endif                    
                     <div class="card-header">{{ $student->nim }}</div>
                         <div class="card-body">
+                        <img width="150px" src="{{asset('storage/'.$student->photo)}}"><br><br>
                             Name : {{ $student->name }} <br>
                             Class : {{ $student->kelas->class_name }} <br>
                             Department : {{ $student->department }} <br>
